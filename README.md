@@ -33,4 +33,4 @@ import { locToCounty, County } from '@fuzzysaj/location-to-usa-county'
 ```
 
 ## About
-2018 US counties boundaries obtained from [United States Census Bureau](https://www.census.gov/programs-surveys/geography.html) in Shapefile format.  Shapefile was converted to GeoJson and downsampled to 1% of original size using [mapshaper](https://mapshaper.org/).
+2018 US counties boundaries obtained from [United States Census Bureau](https://www.census.gov/programs-surveys/geography.html) in Shapefile format.  Shapefile was converted to GeoJson and downsampled to 10% of original size using [mapshaper](https://mapshaper.org/).

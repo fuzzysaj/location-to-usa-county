@@ -11,18 +11,19 @@ let glookup = null;
 function initializeService(): void
 {
   const admin2FeatColl = require('../data/tl_2018_us_county.json') as FeatColl;
+  debug(`admin2FeatColl.type: ${admin2FeatColl.type}`);
   glookup = new gjgLookup(admin2FeatColl);
   debug('Finished initializing GeoJsonGeometries index.');
 }
 
-export async function locToCounty(latitude: number, longitude: number): Promise<County> {
+export function locToCounty(latitude: number, longitude: number): County {
   debug(`Entering locToCounty(${latitude}, ${longitude})`);
   if (!glookup) {
     debug(`Lookup spatial index has not been initialized yet.  Initializing....`);
     initializeService();
   }
   if (!glookup) throw new Error('glookup was not initialized.');
-  const p = { type: "Point", coordinates: [latitude, longitude] };
+  const p = { type: "Point", coordinates: [longitude, latitude] };
   const ccount = glookup.countContainers(p);
   const containers = glookup.getContainers(p);
   if (ccount === 0 || !containers || !containers.features) {

@@ -9,8 +9,8 @@ export interface FeatColl {
 export interface TigerLineCountyFeature {
   type: 'Feature',
   properties: {
-    GEOID?: string,  // fips code
-    NAME?: string // county name
+    GEOID: string,  // fips code
+    NAME: string // county name
   },
   geometry: Polygon | MultiPolygon // | Point | MultiPoint | LineString | MultiLineString
 };
