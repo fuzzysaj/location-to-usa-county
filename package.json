@@ -41,7 +41,7 @@
     "@types/debug": "^4.1.4",
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.6.8",
-    "codecov": "^3.5.0",
+    "codecov": "^3.6.5",
     "nyc": "^14.1.1",
     "source-map-support": "^0.5.12",
     "ts-node": "^8.3.0",
