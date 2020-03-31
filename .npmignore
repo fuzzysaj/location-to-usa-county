@@ -1,3 +1,7 @@
 tsconfig.json
 src
 *.tgz
+coverage
+.nyc_output
+.env
+.vscode
