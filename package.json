@@ -1,6 +1,6 @@
 {
   "name": "@fuzzysaj/location-to-usa-county",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "scripts": {
     "prepare": "tsc",
     "cmd-line-lookup": "DEBUG=location-to-usa-county ts-node src/cmd-line-lookup.ts",

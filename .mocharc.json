@@ -4,5 +4,5 @@
         "source-map-support/register"
     ],
     "recursive": true,
-    "spec": "test/e2e/**/*.spec.ts"
+    "spec": "test/**/*.spec.ts"
 }

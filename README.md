@@ -13,9 +13,10 @@ $ npm install @fuzzysaj/location-to-usa-county
 With JavaScript:
 
 ```js
-const locToCounty = require('@fuzzysaj/location-to-usa-county').locToCounty;
+const getLocToCountyLookupService = require('@fuzzysaj/location-to-usa-county');
 
 (async ()=> {
+  const locToCounty = await getLocToCountyLookupService(); 
   const county = await locToCounty(33.5038, -112.0253); // latitude, longitude for Phoenix
   // -> { county_name: "Maricopa", county_fips: "04013" }
 })();
@@ -24,9 +25,10 @@ const locToCounty = require('@fuzzysaj/location-to-usa-county').locToCounty;
 With TypeScript:
 
 ```ts
-import { locToCounty, County } from '@fuzzysaj/location-to-usa-county'
+import { getLocToCountyLookupService, County } from '@fuzzysaj/location-to-usa-county'
 
 (async ()=> {
+  const locToCounty = await getLocToCountyLookupService();
   const county: County = await locToCounty(33.5038, -112.0253); // latitude, longitude for Phoeinx
   // -> { county_name: "Maricopa", county_fips: "04013" }
 })();
